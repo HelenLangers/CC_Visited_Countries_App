@@ -1,25 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import CountriesContainer from './containers/CountriesContainer';
 
 function App() {
+  const Continents = [
+    {name: "Africa", url: "https://restcountries.com/v3.1/region/africa"},
+    {name: "America", url: "https://restcountries.com/v3.1/region/americas"},
+    {name: "Asia", url:"https://restcountries.com/v3.1/region/asia"},
+    {name: "Europe", url: "https://restcountries.com/v3.1/region/europe"},
+    {name: "Oceania", url:"https://restcountries.com/v3.1/region/oceania"}
+  ]
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <CountriesContainer genres={genres} />
+  )
 
 export default App;
