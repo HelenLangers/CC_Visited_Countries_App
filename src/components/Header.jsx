@@ -1,4 +1,4 @@
-const Header = ({countries}) => {
+const Header = () => {
     return (
         <>
             <h1>Travel Bucket List</h1>

@@ -1,5 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import Header from '../components/Header';
+import ContinentSelect from '../components/ContinentSelect';
+import CountriesSelect from '../components/CountriesSelect';
 
 const CountriesContainer = ({ continents }) => {
     const [countries, setCountries] = useState([]);
@@ -14,8 +16,17 @@ const CountriesContainer = ({ continents }) => {
         .then(countriesList => setCountries(countriesList));
     }
 
+    const handleSelectChange = event => {
+        loadCountries(event.target.value);
+    }
+
     return (
-        <Header countries={countries}/>
+        <>
+        <Header />
+        <ContinentSelect continents={continents} handleSelectChange={handleSelectChange}/>
+        <CountriesSelect countries={countries} handleSelectChange={handleSelectChange}/>
+        <hr></hr>
+        </>
     )
 }
 
