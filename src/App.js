@@ -1,9 +1,9 @@
-import './App.css';
+// import './App.css';
 import React from 'react';
 import CountriesContainer from './containers/CountriesContainer';
 
 function App() {
-  const Continents = [
+  const continents = [
     {name: "Africa", url: "https://restcountries.com/v3.1/region/africa"},
     {name: "America", url: "https://restcountries.com/v3.1/region/americas"},
     {name: "Asia", url:"https://restcountries.com/v3.1/region/asia"},
@@ -12,7 +12,8 @@ function App() {
   ]
 
   return (
-    <CountriesContainer genres={genres} />
+    <CountriesContainer continents={continents} />
   )
+}
 
 export default App;
