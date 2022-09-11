@@ -80,3 +80,7 @@ img {
 .travelled-list {
   list-style-type: none;
 }
+
+MapsContainer { 
+  height: 180px; 
+}

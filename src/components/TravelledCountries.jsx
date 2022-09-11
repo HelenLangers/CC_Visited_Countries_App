@@ -1,24 +1,25 @@
 
-const TravelledCountries =({ countries, handleSelectCountry }) => {
+
+const TravelledCountries =({ countries }) => {
     
     const travelledCountries = countries.filter(country => country.isTravelled)
     
     return (
+        <section>
         <div>
         <hr></hr>
             <h3>Countries I've Travelled To:</h3>
             <ul className="travelled-list">
                 {travelledCountries.map(country => {
                     return (
-                        <li key={country.cca3}>
-                            <button onClick={() => handleSelectCountry(country.cca3)}>{country.name.common}
-                            </button>
+                        <li>{country.name.common}
                         </li>
                     )
                 })}
             </ul>
             <p>You've been to {travelledCountries.length} countries</p>
         </div>
+        </section>
     )
 }
 
