@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import ContinentSelect from '../components/ContinentSelect';
 import CountriesSelect from '../components/CountriesSelect';
 import CountryItem from '../components/CountryItem';
+import TravelledCountries from '../components/TravelledCountries';
 
 const CountriesContainer = ({ continents }) => {
     const [countries, setCountries] = useState([]);
@@ -29,16 +30,26 @@ const CountriesContainer = ({ continents }) => {
 
     const selectedCountry = countries.find(country => country.cca3 === selectedCountryCCA3Code)
 
+    const handleTravelledToggle = (cca3) => {
+        const updatedCountries = countries.map((country) => {
+            return country.cca3 === cca3
+            ? {...country, isTravelled: !country.isTravelled}
+            : country
+        })
+        setCountries(updatedCountries)
+    }
+
+
     return (
         <section>
         <Header />
             <section className="options">
-        <ContinentSelect continents={continents} handleSelectContinent={handleSelectContinent}/>
-        <CountriesSelect countries={countries} handleSelectCountry={handleSelectCountry}/>
-        </section>
+            <ContinentSelect continents={continents} handleSelectContinent={handleSelectContinent}/>
+            <CountriesSelect countries={countries} handleSelectCountry={handleSelectCountry}/>
+            </section>
         <hr></hr>
-
-        <CountryItem country={selectedCountry} />
+        <CountryItem country={selectedCountry} onTravelledToggle={handleTravelledToggle}/>
+        <TravelledCountries countries={countries} />
         </section>
     )
 }

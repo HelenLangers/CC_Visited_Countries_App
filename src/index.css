@@ -14,7 +14,8 @@ html {
 .main-section {
   display: inline-block;
   background-color: rgba(252, 252, 241, 0.8);
-  width: 60%;
+  width: 70%;
+  padding: 0 1rem 2rem 1rem;
 }
 
 .options {
@@ -34,16 +35,44 @@ h1 {
   margin: 0.5rem;
 }
 
-
 hr {
   width: 60%;
-}
-
-h3 {
-  font-size: 2rem;
 }
 
 .country-block {
   display: flex;
   justify-content: center;
+}
+
+.country-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.country-info > h3 {
+  font-size: 2rem;
+  margin: 0.5rem;
+}
+
+.country-info > p {
+  margin: 0.5rem;
+}
+
+.flag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* max-width: 40%; */
+}
+
+img {
+  max-width: 50%;
+}
+
+.button{
+	padding: 10px;
+	background: #000;
+	color: #fff;
+	cursor: pointer;
+	border: 1px solid #000;
 }
