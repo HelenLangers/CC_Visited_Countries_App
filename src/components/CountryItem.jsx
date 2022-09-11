@@ -21,7 +21,6 @@ const CountryItem = ({country, onTravelledToggle}) => {
             <div className="flag">
                 <img src={country.flags.png} alt={`Flag of ${country.name.official}`}></img>
             </div>
-            <p></p>
         </article>
     )
 }

@@ -49,7 +49,7 @@ const CountriesContainer = ({ continents }) => {
             </section>
         <hr></hr>
         <CountryItem country={selectedCountry} onTravelledToggle={handleTravelledToggle}/>
-        <TravelledCountries countries={countries} />
+        <TravelledCountries countries={countries} handleSelectCountry={handleSelectCountry}/>
         </section>
     )
 }
