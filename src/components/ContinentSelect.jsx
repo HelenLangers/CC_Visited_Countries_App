@@ -3,7 +3,7 @@ import React from 'react';
 const ContinentSelect = ({continents, handleSelectContinent}) => {
 
     return (
-        <div>
+        <div className="continent-select">
             <h2>Select a Continent:</h2>
             <select defaultValue="" onChange={handleSelectContinent}>
             <option value = "" disabled>Where Have You Been?</option>

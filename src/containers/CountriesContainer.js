@@ -30,13 +30,16 @@ const CountriesContainer = ({ continents }) => {
     const selectedCountry = countries.find(country => country.cca3 === selectedCountryCCA3Code)
 
     return (
-        <>
+        <section>
         <Header />
+            <section className="options">
         <ContinentSelect continents={continents} handleSelectContinent={handleSelectContinent}/>
         <CountriesSelect countries={countries} handleSelectCountry={handleSelectCountry}/>
+        </section>
         <hr></hr>
+
         <CountryItem country={selectedCountry} />
-        </>
+        </section>
     )
 }
 

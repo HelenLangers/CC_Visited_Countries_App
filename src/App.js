@@ -12,7 +12,9 @@ function App() {
   ]
 
   return (
-    <CountriesContainer continents={continents} />
+    <section className="main-section">
+      <CountriesContainer continents={continents} />
+    </section>
   )
 }
 

@@ -9,9 +9,11 @@ const CountryItem = ({country}) => {
     // console.log(country)
 
     return (
-        <div>
-        <h3>Name: {country.name.official}</h3>
-        </div>
+        <article class="country-block">
+            <h3>{country.name.common}</h3>
+            <img src={country.flags.png} alt={`Flag of ${country.name.official}`}></img>
+            <p></p>
+        </article>
     )
 }
 

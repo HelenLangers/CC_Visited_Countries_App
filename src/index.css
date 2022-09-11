@@ -3,7 +3,47 @@ body {
   text-align: center;
 }
 
+html {
+  background: url("https://images.photowall.com/products/60742/palm-trees-on-white-beach.jpg?h=699&q=85") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.main-section {
+  display: inline-block;
+  background-color: rgba(252, 252, 241, 0.8);
+  width: 60%;
+}
+
+.options {
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+.continent-select {
+  margin: 0.5rem;
+}
+
+.country-select {
+  margin: 0.5rem;
+}
+
+
 hr {
   width: 60%;
 }
 
+h3 {
+  font-size: 2rem;
+}
+
+.country-block {
+  display: flex;
+  justify-content: center;
+}
