@@ -33,9 +33,14 @@ const CountriesContainer = ({ continents }) => {
     const selectedCountry = countries.find(country => country.cca3 === selectedCountryCCA3Code)
 
     const handleTravelledToggle = (cca3) => {
-        const countryToFav = countries.find(country => country.cca3 == cca3)
+        const countryToFav = countries.find(country => country.cca3 === cca3)
         const copyOfFavCountries = [...favCountries, countryToFav]
         setFavCountries(copyOfFavCountries)
+    }
+
+    const handleCountryRemove = (cca3) => {
+        const newCopyOfFavCountries = favCountries.filter(country => country.cca3 !== cca3)
+        setFavCountries(newCopyOfFavCountries)
     }
 
 
@@ -48,7 +53,7 @@ const CountriesContainer = ({ continents }) => {
             </section>
         <hr></hr>
         <CountryItem country={selectedCountry} onTravelledToggle={handleTravelledToggle}/>
-        <TravelledCountries countries={favCountries} />
+        <TravelledCountries countries={favCountries} onCountryRemove={handleCountryRemove}/>
         </section>
 
     )

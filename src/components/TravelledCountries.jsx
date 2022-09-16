@@ -1,7 +1,11 @@
 
 
-const TravelledCountries =({ countries }) => {
+const TravelledCountries =({ countries, onCountryRemove}) => {
     
+    const handleSelectCountry = (event) => {
+        onCountryRemove(event.target.value)
+    }
+
     const changeParagraph = () => {
         if(countries.length === 1 ) {
             return(
@@ -24,10 +28,13 @@ const TravelledCountries =({ countries }) => {
                 {countries.map(country => {
                     return (
                         <li>{country.name.common}
+                        
+                        <button className="button" onClick={handleSelectCountry} value={country.cca3}>Remove</button>
                         </li>
                     )
                 })}
             </ul>
+            
             {changeParagraph()}
         </div>
         </section>
