@@ -1,9 +1,10 @@
 import React from 'react';
+import Mapping from '../containers/Mapping';
 
 const CountryItem = ({country, onTravelledToggle}) => {
 
     if (!country) {
-        return null
+        return ("Please Select a Country")
     }
 
     const buttonClick = () => {
@@ -20,6 +21,10 @@ const CountryItem = ({country, onTravelledToggle}) => {
             </div>
             <div className="flag">
                 <img src={country.flags.png} alt={`Flag of ${country.name.official}`}></img>
+            </div>
+            <div className="break"></div>
+            <div className="map">
+            <Mapping country={country}/>
             </div>
         </article>
     )

@@ -4,11 +4,11 @@ import ContinentSelect from '../components/ContinentSelect';
 import CountriesSelect from '../components/CountriesSelect';
 import CountryItem from '../components/CountryItem';
 import TravelledCountries from '../components/TravelledCountries';
-import { MapContainer } from 'react-leaflet';
 
 
 const CountriesContainer = ({ continents }) => {
     const [countries, setCountries] = useState([]);
+    const [favCountries, setFavCountries] = useState([])
     const [selectedCountryCCA3Code, setSelectedCountryCCA3Code] = useState('')
 
     useEffect(() => {
@@ -33,25 +33,10 @@ const CountriesContainer = ({ continents }) => {
     const selectedCountry = countries.find(country => country.cca3 === selectedCountryCCA3Code)
 
     const handleTravelledToggle = (cca3) => {
-        const updatedCountries = countries.map((country) => {
-            return country.cca3 === cca3
-            ? {...country, isTravelled: !country.isTravelled}
-            : country
-        })
-        setCountries(updatedCountries)
+        const countryToFav = countries.find(country => country.cca3 == cca3)
+        const copyOfFavCountries = [...favCountries, countryToFav]
+        setFavCountries(copyOfFavCountries)
     }
-
-    // const handleTravelledToggle = (cca3) => {
-    //     const travelledCountries = []
-        
-    //     countries.map((country) => {
-    //         return country.cca3 === cca3
-    //         ? {...country, isTravelled: !country.isTravelled}
-    //         : country
-    //     })
-    //     travelledCountries.push(country)
-    //     return travelledCountries
-    // }
 
 
     return (
@@ -63,8 +48,7 @@ const CountriesContainer = ({ continents }) => {
             </section>
         <hr></hr>
         <CountryItem country={selectedCountry} onTravelledToggle={handleTravelledToggle}/>
-        <TravelledCountries countries={countries} />
-        <MapContainer />
+        <TravelledCountries countries={favCountries} />
         </section>
 
     )

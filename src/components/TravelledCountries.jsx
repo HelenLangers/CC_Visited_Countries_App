@@ -2,7 +2,18 @@
 
 const TravelledCountries =({ countries }) => {
     
-    const travelledCountries = countries.filter(country => country.isTravelled)
+    const changeParagraph = () => {
+        if(countries.length === 1 ) {
+            return(
+                <p>You have been to {countries.length} country</p>
+            );}
+        else {
+            return (
+                <p>You've been to {countries.length} countries</p>
+            )
+        }
+    }
+        
     
     return (
         <section>
@@ -10,14 +21,14 @@ const TravelledCountries =({ countries }) => {
         <hr></hr>
             <h3>Countries I've Travelled To:</h3>
             <ul className="travelled-list">
-                {travelledCountries.map(country => {
+                {countries.map(country => {
                     return (
                         <li>{country.name.common}
                         </li>
                     )
                 })}
             </ul>
-            <p>You've been to {travelledCountries.length} countries</p>
+            {changeParagraph()}
         </div>
         </section>
     )
