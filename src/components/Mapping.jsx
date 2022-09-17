@@ -4,7 +4,7 @@ import { TileLayer } from 'react-leaflet/TileLayer'
 import { Marker } from 'react-leaflet/Marker'
 import { Popup} from 'react-leaflet/Popup'
 
-function Mapping({country}) {
+const Mapping = ({country}) => {
 
     
     return (

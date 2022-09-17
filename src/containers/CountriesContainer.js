@@ -10,6 +10,7 @@ const CountriesContainer = ({ continents }) => {
     const [countries, setCountries] = useState([]);
     const [favCountries, setFavCountries] = useState([])
     const [selectedCountryCCA3Code, setSelectedCountryCCA3Code] = useState('')
+    const [content, setContent] = useState("")
 
     useEffect(() => {
         loadCountries(continents[0].url)
@@ -53,7 +54,7 @@ const CountriesContainer = ({ continents }) => {
             </section>
         <hr></hr>
         <CountryItem country={selectedCountry} onTravelledToggle={handleTravelledToggle}/>
-        <TravelledCountries countries={favCountries} onCountryRemove={handleCountryRemove}/>
+        <TravelledCountries countries={favCountries} onCountryRemove={handleCountryRemove} setTooltipContent={setContent} content={content}/>
         </section>
 
     )

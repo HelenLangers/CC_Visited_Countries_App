@@ -82,9 +82,14 @@ img {
 	color: #fff;
 	cursor: pointer;
 	border: 1px solid #000;
+  margin: 0.5rem;
 }
 
 .travelled-list {
   list-style-type: none;
 }
 
+svg {
+  display: inline-block;
+  vertical-align: middle;
+}

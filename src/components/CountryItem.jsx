@@ -1,5 +1,5 @@
 import React from 'react';
-import Mapping from '../containers/Mapping';
+import Mapping from './Mapping';
 
 const CountryItem = ({country, onTravelledToggle}) => {
 
