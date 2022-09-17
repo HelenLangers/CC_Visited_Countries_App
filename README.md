@@ -83,6 +83,11 @@ To run this app, you must have:
   npm install --save react-simple-maps
   ```
 
+* React ToolTip
+  ```sh
+  npm install react-tooltip
+  ```  
+
 * Router
   ```sh
   npm install react-router-dom
