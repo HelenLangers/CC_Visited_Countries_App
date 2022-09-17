@@ -3,9 +3,9 @@ import { ZoomableGroup, ComposableMap, Geographies, Geography } from "react-simp
 
 const MapChart = ({ setTooltipContent, selectedCountry, favCountries, handleSelectCountryFromMap }) => {
 
-    if (!selectedCountry) {
-        return ("Please Select a Country")
-    }
+    // if (!selectedCountry) {
+    //     return ("Please Select a Country")
+    // }
 
     return (
         <div data-tip="">

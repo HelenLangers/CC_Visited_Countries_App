@@ -112,7 +112,7 @@ To run this app, you must have:
    ```sh
    npm start
    ```
-6. Open in Chrome: http://localhost:3000
+6. A new window should automatically open (Chrome is ideal), but if not visit http://localhost:3000/
 7. To stop the server enter ctrl + c in your Terminal
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
