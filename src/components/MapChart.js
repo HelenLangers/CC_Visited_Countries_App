@@ -1,12 +1,14 @@
 import React from "react"
-import { ZoomableGroup, ComposableMap, Geographies, Geography } from "react-simple-maps"
+import { ZoomableGroup, ComposableMap, Geographies, Geography, Marker } from "react-simple-maps"
 
-const MapChart = ({ setTooltipContent, favCountries, handleSelectCountryFromMap }) => {
+const MapChart = ({ setTooltipContent, selectedCountry, favCountries, handleSelectCountryFromMap }) => {
+
+    const marker = [{selectedCountry}]
 
     return (
         <div data-tip="">
          <ComposableMap projection="geoMercator" projectionConfig={{scale:110}}>
-         {/* <ZoomableGroup> */}
+         <ZoomableGroup>
         <Geographies geography="/features.json">
             {({ geographies }) =>
                 geographies.map((geo) => {
@@ -27,7 +29,23 @@ const MapChart = ({ setTooltipContent, favCountries, handleSelectCountryFromMap 
                 )
             })}
         </Geographies>
-        {/* </ZoomableGroup> */}
+            {/* <Marker key={selectedCountry.name.common} coordinates={selectedCountry.capitalInfo.latlng}>
+            <g
+            fill="none"
+            stroke="#FF5533"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            transform="translate(-12, -24)">
+            <circle cx="12" cy="10" r="3" />
+            <path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 6.9 8 11.7z" />
+          </g>
+          <text
+            textAnchor="middle"
+            y="15"
+            style={{fill:"#5D5A6D"}}>{selectedCountry.capital}</text>
+            </Marker> */}
+        </ZoomableGroup>
         </ComposableMap>
         </div>
     );

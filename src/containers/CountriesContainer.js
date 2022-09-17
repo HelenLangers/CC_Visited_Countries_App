@@ -4,20 +4,30 @@ import ContinentSelect from '../components/ContinentSelect';
 import CountriesSelect from '../components/CountriesSelect';
 import CountryItem from '../components/CountryItem';
 import TravelledCountries from '../components/TravelledCountries';
-import MapChart from '../components/AnotherMap';
+import MapChart from '../components/MapChart';
 import ReactTooltip from "react-tooltip";
 
 
 const CountriesContainer = ({ continents }) => {
 
     const [countries, setCountries] = useState([]);
-    const [favCountries, setFavCountries] = useState([])
+    const [favCountries, setFavCountries] = useState(() => {
+        const savedCountriesJSON = localStorage.getItem('countries visited')
+        if (savedCountriesJSON == null) {
+            return []}
+        else {
+            return JSON.parse(savedCountriesJSON)}
+        });
     const [selectedCountryCCA3Code, setSelectedCountryCCA3Code] = useState('')
     const [content, setContent] = useState("")
 
     useEffect(() => {
         loadCountries(continents[0].url)
     }, [continents])
+
+    useEffect(() => {
+        localStorage.setItem('countries visited', JSON.stringify(favCountries))
+    }, [favCountries])
 
     const loadCountries = url => {
         fetch(url)
@@ -62,10 +72,9 @@ const CountriesContainer = ({ continents }) => {
         <hr></hr>
         <CountryItem country={selectedCountry} onTravelledToggle={handleTravelledToggle}/>
         <TravelledCountries countries={favCountries} onCountryRemove={handleCountryRemove} setTooltipContent={setContent} content={content} handleSelectCountry={handleSelectCountry} handleSelectCountryFromMap={handleSelectCountryFromMap}/>
-        <MapChart favCountries={favCountries} setTooltipContent={setContent} handleSelectCountryFromMap={handleSelectCountryFromMap}/>
+        <MapChart selectedCountry={selectedCountry} favCountries={favCountries} setTooltipContent={setContent} handleSelectCountryFromMap={handleSelectCountryFromMap}/>
         <ReactTooltip>{content}</ReactTooltip>
         </section>
-
     )
 }
 

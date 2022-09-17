@@ -12,7 +12,7 @@ const CountryItem = ({country, onTravelledToggle}) => {
     }
 
     return (
-        <article className="country-block">
+        <div className="country-block">
             <div className="country-info">
                 <h3>{country.name.common}</h3>
                 <p>Capital: {country.capital}</p>
@@ -23,10 +23,10 @@ const CountryItem = ({country, onTravelledToggle}) => {
                 <img src={country.flags.png} alt={`Flag of ${country.name.official}`}></img>
             </div>
             <div className="break"></div>
-            <div className="map">
+            {/* <div className="map">
             <Mapping country={country}/>
-            </div>
-        </article>
+            </div> */}
+        </div>
     )
 }
 
