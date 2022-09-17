@@ -27,6 +27,11 @@ html {
   color: #000;
 }
 
+.About-List {
+  list-style: none;
+  text-align: center;
+}
+
 .main-section {
   display: inline-block;
   background-color: rgba(176, 198, 231, 0.8);
