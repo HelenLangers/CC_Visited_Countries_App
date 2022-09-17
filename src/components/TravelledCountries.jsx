@@ -27,16 +27,18 @@ const TravelledCountries =({ countries, onCountryRemove, setTooltipContent, cont
         <div>
         <hr></hr>
             <h3>Countries I've Travelled To:</h3>
-            <ul className="travelled-list">
+            <div className="travelled-block">
                 {countries.map(country => {
                     return (
-                        <li key={country.cca3}>{country.name.common}
+                        <div className="added-country" key={country.cca3}>
+                        <p>{country.name.common}
                         
                         <button className="button" onClick={handleSelectCountry} value={country.cca3}>Remove</button>
-                        </li>
+                        </p>
+                        </div>
                     )
                 })}
-            </ul>
+            </div>
             {changeParagraph()}
         </div>
         <div>

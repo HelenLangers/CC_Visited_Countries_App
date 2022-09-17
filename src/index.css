@@ -85,8 +85,18 @@ img {
   margin: 0.5rem;
 }
 
-.travelled-list {
-  list-style-type: none;
+.travelled-block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.added-country {
+  margin: 0 1rem 0 1rem;
+}
+
+.added-country > p {
+  margin: 0;
 }
 
 svg {
