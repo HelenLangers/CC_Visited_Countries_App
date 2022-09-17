@@ -47,9 +47,9 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-With this app you can select a continent, then a country, view some information and add it to a 'visited countries list' which is also stored locally. Once added to this list, it'll be coloured in blue on a world map. If you've made a mistake, you can remove the country from your 'visited' list.
+With this app you can select a continent, then a country, view some information about it and add it to a 'visited countries list' which is stored locally. Once added to this list, it'll be coloured in blue on a world map. If you've made a mistake, you can remove the country from your 'visited' list.
 
-I initially designed this app to only have a continent dropdown and a countries dropdown to cement understanding of APIs and the useState and useEffect hooks. Once I got the hang of that, I added in a Leaflet map to show the capital city of the selected country. Once that was working, I added the React-Simple-Maps to colour in a country if it's entered into the 'I've been here' list. Finally, I've added in some routing (which is how you're seeing this page) and local storage for your visited countries. There are a couple of bugs, and I'll keep building on this to further my understanding over time. For a first React project after learning about it for 2-3 weeks, I'm pleased.
+I initially designed this app to only have a continent dropdown and a countries dropdown to cement understanding of APIs and the useState and useEffect hooks. Once I got the hang of that, I added in a Leaflet map to show the capital city of the selected country. Once that was working, I added the React-Simple-Maps to colour in a country if it's entered into the 'I've been here' list. Finally, I added in some routing as we covered this in class while I was still working on this project. There are a couple of bugs, and I'll keep building on this to further my understanding over time. For a first React project after learning about it for 2-3 weeks, I'm quite pleased.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
