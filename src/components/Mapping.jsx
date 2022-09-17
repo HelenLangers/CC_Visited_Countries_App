@@ -3,6 +3,8 @@ import { TileLayer } from 'react-leaflet/TileLayer'
 import { Marker } from 'react-leaflet/Marker'
 import { Popup} from 'react-leaflet/Popup'
 
+// This leaflet map is currently redundant. I'm attempting to show the capital city on the other react-simple-maps map
+
 const Mapping = ({country}) => {
   
     

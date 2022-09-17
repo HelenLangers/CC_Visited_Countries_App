@@ -1,9 +1,11 @@
 import React from "react"
-import { ZoomableGroup, ComposableMap, Geographies, Geography, Marker } from "react-simple-maps"
+import { ZoomableGroup, ComposableMap, Geographies, Geography } from "react-simple-maps"
 
 const MapChart = ({ setTooltipContent, selectedCountry, favCountries, handleSelectCountryFromMap }) => {
 
-    const marker = [{selectedCountry}]
+    if (!selectedCountry) {
+        return ("Please Select a Country")
+    }
 
     return (
         <div data-tip="">
