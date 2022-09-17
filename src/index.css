@@ -13,7 +13,7 @@ html {
 
 .main-section {
   display: inline-block;
-  background-color: rgba(252, 252, 241, 0.8);
+  background-color: rgba(176, 198, 231, 0.8);
   width: 70%;
   padding: 0 1rem 2rem 1rem;
 }
@@ -63,7 +63,6 @@ hr {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* max-width: 40%; */
 }
 
 .break {
