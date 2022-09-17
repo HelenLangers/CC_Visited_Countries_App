@@ -33,28 +33,3 @@ const MapChart = ({ setTooltipContent, countries }) => {
     }
 
 export default MapChart;
-
-
-    {/* <Geography key={geo.rsmKey} geography={geo} 
-    onMouseEnter={() => {setTooltipContent(`${geo.properties.name}`);}}
-    onMouseLeave={() => {setTooltipContent("");}}
-                                    
-    style={{
-            default: {
-                fill: "#D6D6DA",
-                outline: "none"
-            },
-            hover: {
-                fill: "#F53",
-                outline: "none"
-            },
-            pressed: {
-                fill: "#E42",
-                outline: "none"
-            },
-            isFav: {
-                fill:"#F53",
-                outline: "none"
-            }
-        }}
-                                /> */}
