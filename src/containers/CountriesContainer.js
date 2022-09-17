@@ -4,6 +4,8 @@ import ContinentSelect from '../components/ContinentSelect';
 import CountriesSelect from '../components/CountriesSelect';
 import CountryItem from '../components/CountryItem';
 import TravelledCountries from '../components/TravelledCountries';
+import MapChart from '../components/AnotherMap';
+import ReactTooltip from "react-tooltip";
 
 
 const CountriesContainer = ({ continents }) => {
@@ -31,6 +33,11 @@ const CountriesContainer = ({ continents }) => {
         setSelectedCountryCCA3Code(event.target.value)
     }
 
+    const handleSelectCountryFromMap = event => {
+        setSelectedCountryCCA3Code(event.target.attributes.value.value)
+        console.log(event.target.attributes.value.value)
+    }
+
     const selectedCountry = countries.find(country => country.cca3 === selectedCountryCCA3Code)
 
     const handleTravelledToggle = (cca3) => {
@@ -54,7 +61,9 @@ const CountriesContainer = ({ continents }) => {
             </section>
         <hr></hr>
         <CountryItem country={selectedCountry} onTravelledToggle={handleTravelledToggle}/>
-        <TravelledCountries countries={favCountries} onCountryRemove={handleCountryRemove} setTooltipContent={setContent} content={content}/>
+        <TravelledCountries countries={favCountries} onCountryRemove={handleCountryRemove} setTooltipContent={setContent} content={content} handleSelectCountry={handleSelectCountry} handleSelectCountryFromMap={handleSelectCountryFromMap}/>
+        <MapChart favCountries={favCountries} setTooltipContent={setContent} handleSelectCountryFromMap={handleSelectCountryFromMap}/>
+        <ReactTooltip>{content}</ReactTooltip>
         </section>
 
     )

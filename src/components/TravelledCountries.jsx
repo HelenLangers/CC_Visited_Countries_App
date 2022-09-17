@@ -1,9 +1,6 @@
 import React from "react";
-import MapChart from '../components/AnotherMap';
-import ReactTooltip from "react-tooltip";
 
-
-const TravelledCountries =({ countries, onCountryRemove, setTooltipContent, content}) => {
+const TravelledCountries =({ countries, onCountryRemove }) => {
     
     const handleSelectCountry = (event) => {
         onCountryRemove(event.target.value)
@@ -40,10 +37,6 @@ const TravelledCountries =({ countries, onCountryRemove, setTooltipContent, cont
                 })}
             </div>
             {changeParagraph()}
-        </div>
-        <div>
-        <MapChart countries={countries} setTooltipContent={setTooltipContent} />
-        <ReactTooltip>{content}</ReactTooltip>
         </div>
         </section>
     )
