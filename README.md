@@ -35,6 +35,7 @@
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
         <li><a href="#roadmap">Roadmap</a></li>
+        <li><a href="#contributing">Contributing</a></li>
       </ul>
     </li>
     <li><a href="#contact">Contact</a></li>
@@ -117,6 +118,21 @@ To run this app, you must have:
 - [ ] Whilst the Leaflet map is hidden, I made an attempt at using the MapChart to show the selected country and it's info. I'd like this to work more than the Leaflet map in the long term.
 - [ ] The Map Chart is clickable and will change the selected country BUT only if the clicked country is in the same continent as the previously selected country. This needs fixing and will likely require the removal of the continent dropdown and only hit the API via their 'viewall' JSON.
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
+## Contributing
+
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+Don't forget to give the project a star! Thanks again!
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -136,7 +152,9 @@ Project Link: [https://github.com/HelenLangers/CC_Week7_weekendhw_countriesapp](
 ## Acknowledgments
 
 * [CodeClan](https://codeclan.com/)
-* [FontAwesome](https://fontawesome.com/)
+* [REST Countries API](https://restcountries.com/)
+* [Leaflet](https://react-leaflet.js.org/)
+* [React-Simple-Maps](https://www.react-simple-maps.io/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
