@@ -122,7 +122,8 @@ To run this app, you must have:
 - [ ] Currently, you can add one country multiple times to your 'visited' list. I'd like to make this so you can only add one country once.
 - [ ] In it's current version, the Leaflet map (which is designed to appear when selecting a country) does not recenter when the selected country changes. I've hidden that component for now. If you want to make use of it, simply uncomment the Mapping element under CountryItem.js
 - [ ] Whilst the Leaflet map is hidden, I made an attempt at using the MapChart to show the selected country and it's info. I'd like this to work more than the Leaflet map in the long term.
-- [ ] The Map Chart is clickable and will change the selected country BUT only if the clicked country is in the same continent as the previously selected country. This needs fixing and will likely require the removal of the continent dropdown and only hit the API via their 'viewall' JSON.
+- [ ] The Map Chart is clickable and will change the selected country BUT only if the clicked country is in the same continent as the previously selected country. This needs fixing and will likely require the removal of the continent dropdown and only hit the API via their 'view-all' JSON.
+- [ ] Once these main features are working, I want to make this a much more responsive app to work better on mobile. I also need to improve my understanding and execution of accessibility in React and implement it here.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
