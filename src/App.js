@@ -1,5 +1,8 @@
 // import './App.css';
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import NavBar from './components/NavBar';
+import About from './components/About';
 import CountriesContainer from './containers/CountriesContainer';
 
 function App() {
@@ -13,9 +16,15 @@ function App() {
   ]
 
   return (
+    <Router>
     <section className="main-section">
-      <CountriesContainer continents={continents} />
+    <NavBar />
+    <Routes>
+      <Route path="/" element={<CountriesContainer continents={continents} />} />
+      <Route path="/about/" element={<About />} />
+      </Routes>
     </section>
+    </Router>
   )
 }
 

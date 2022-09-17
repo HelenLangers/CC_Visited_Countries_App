@@ -10,7 +10,7 @@ const MapChart = ({ setTooltipContent, favCountries, handleSelectCountryFromMap 
         <Geographies geography="/features.json">
             {({ geographies }) =>
                 geographies.map((geo) => {
-                const ids = favCountries.find((s) => s.cca3 === geo.id)
+                const ids = favCountries.find((country) => country.cca3 === geo.id)
                 return (
                  <Geography
                     value={geo.id}

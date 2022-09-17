@@ -11,6 +11,22 @@ html {
   background-size: cover;
 }
 
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.list-item {
+  margin: 1rem;
+  text-decoration: none;
+}
+
+.link {
+  text-decoration: none;
+  color: #000;
+}
+
 .main-section {
   display: inline-block;
   background-color: rgba(176, 198, 231, 0.8);
