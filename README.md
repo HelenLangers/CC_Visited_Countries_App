@@ -47,6 +47,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+With this app you can select a continent, then a country, view some information and add it to a 'visited countries list' which is also stored locally. Once added to this list, it'll be coloured in blue on a world map. If you've made a mistake, you can remove the country from your 'visited' list.
 
 I initially designed this app to only have a continent dropdown and a countries dropdown to cement understanding of APIs and the useState and useEffect hooks. Once I got the hang of that, I added in a Leaflet map to show the capital city of the selected country. Once that was working, I added the React-Simple-Maps to colour in a country if it's entered into the 'I've been here' list. Finally, I've added in some routing (which is how you're seeing this page) and local storage for your visited countries. There are a couple of bugs, and I'll keep building on this to further my understanding over time. For a first React project after learning about it for 2-3 weeks, I'm pleased.
 
@@ -89,20 +90,20 @@ To run this app, you must have:
 
 ### Installation
 
-1. Clone the repo
+1. Create a folder on your laptop and navigate to it via Terminal
+2. Clone the git
    ```sh
    git clone git@github.com:HelenLangers/CC_Week7_weekendhw_countriesapp.git
    ```
-2. Navigate via Terminal to the folder
 3. Install NPM packages
    ```sh
    npm install
    ```
-3. Launch VSCode
+4. Launch VSCode
    ```sh
    code .
    ```
-4. Start the server
+5. Start the server
    ```sh
    npm start
    ```
@@ -113,8 +114,8 @@ To run this app, you must have:
 
 <!-- ROADMAP -->
 ## Roadmap
-
-- [ ] Currently, the Leaflet map (which is designed to appear when selecting a country) does not recenter when the selected country changes. I've hidden that component for now. If you want to make use of it, simply uncomment the Mapping element under CountryItem.js
+- [ ] Currently, you can add one country multiple times to your 'visited' list. I'd like to make this so you can only add one country once.
+- [ ] In it's current version, the Leaflet map (which is designed to appear when selecting a country) does not recenter when the selected country changes. I've hidden that component for now. If you want to make use of it, simply uncomment the Mapping element under CountryItem.js
 - [ ] Whilst the Leaflet map is hidden, I made an attempt at using the MapChart to show the selected country and it's info. I'd like this to work more than the Leaflet map in the long term.
 - [ ] The Map Chart is clickable and will change the selected country BUT only if the clicked country is in the same continent as the previously selected country. This needs fixing and will likely require the removal of the continent dropdown and only hit the API via their 'viewall' JSON.
 
