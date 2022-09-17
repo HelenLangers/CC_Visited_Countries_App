@@ -8,7 +8,8 @@ function App() {
     {name: "America", url: "https://restcountries.com/v3.1/region/americas"},
     {name: "Asia", url:"https://restcountries.com/v3.1/region/asia"},
     {name: "Europe", url: "https://restcountries.com/v3.1/region/europe"},
-    {name: "Oceania", url:"https://restcountries.com/v3.1/region/oceania"}
+    {name: "Oceania", url:"https://restcountries.com/v3.1/region/oceania"},
+    {name: "Whole World", url: "https://restcountries.com/v3.1/all"}
   ]
 
   return (

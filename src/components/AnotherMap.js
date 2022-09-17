@@ -6,7 +6,7 @@ const MapChart = ({ setTooltipContent, favCountries, handleSelectCountryFromMap 
     return (
         <div data-tip="">
          <ComposableMap projection="geoMercator" projectionConfig={{scale:110}}>
-         <ZoomableGroup>
+         {/* <ZoomableGroup> */}
         <Geographies geography="/features.json">
             {({ geographies }) =>
                 geographies.map((geo) => {
@@ -27,7 +27,7 @@ const MapChart = ({ setTooltipContent, favCountries, handleSelectCountryFromMap 
                 )
             })}
         </Geographies>
-        </ZoomableGroup>
+        {/* </ZoomableGroup> */}
         </ComposableMap>
         </div>
     );

@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from '../components/Header';
 import ContinentSelect from '../components/ContinentSelect';
 import CountriesSelect from '../components/CountriesSelect';
@@ -9,6 +10,7 @@ import ReactTooltip from "react-tooltip";
 
 
 const CountriesContainer = ({ continents }) => {
+
     const [countries, setCountries] = useState([]);
     const [favCountries, setFavCountries] = useState([])
     const [selectedCountryCCA3Code, setSelectedCountryCCA3Code] = useState('')
@@ -35,7 +37,6 @@ const CountriesContainer = ({ continents }) => {
 
     const handleSelectCountryFromMap = event => {
         setSelectedCountryCCA3Code(event.target.attributes.value.value)
-        console.log(event.target.attributes.value.value)
     }
 
     const selectedCountry = countries.find(country => country.cca3 === selectedCountryCCA3Code)

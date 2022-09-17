@@ -8,7 +8,8 @@ const ContinentSelect = ({continents, handleSelectContinent}) => {
             <select defaultValue="" onChange={handleSelectContinent}>
             <option value = "" disabled>Where Have You Been?</option>
                 {continents.map(continent => {
-                    return <option key={continent.name} value={continent.url}>{continent.name}</option>
+                    if(continent.name == "Whole World") {<option key={continent.name} value={continent.url}>{continent.name}</option>}
+                    else {return <option key={continent.name} value={continent.url}>{continent.name}</option>}
                 })}
             </select>
         </div>
