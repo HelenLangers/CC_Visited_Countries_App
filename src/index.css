@@ -123,3 +123,18 @@ svg {
   display: inline-block;
   vertical-align: middle;
 }
+
+
+@media only screen and (max-width: 768px) {
+  .options {
+    flex-direction: column;
+  }
+
+  .continent-select {
+    width: 100%;
+  }
+
+  .country-select {
+    width: 100%;
+  }
+}
